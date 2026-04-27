@@ -23,7 +23,7 @@ export default function Team() {
           </h1>
 
           <p className="text-slate-500 text-xl md:text-2xl font-medium max-w-3xl mx-auto leading-relaxed">
-            Zyntro360 is led by founders who blend creative strategy with technical precision to build the 
+            Zyntro360 is led by founders who blend creative strategy with technical precision to build the
             future of digital branding.
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function Team() {
                 <p className="text-accentBlue font-black text-[10px] uppercase tracking-[0.4em] mb-6">Co-Founder & Creative Director</p>
 
                 <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10 max-w-sm mx-auto">
-                  Fuad drives the creative vision and strategic direction, ensuring every brand asset captures 
+                  Fuad drives the creative vision and strategic direction, ensuring every brand asset captures
                   emotion and delivers measurable growth.
                 </p>
 
@@ -80,11 +80,11 @@ export default function Team() {
               </div>
 
               <div className="px-4 text-center">
-                <h2 className="font-heading font-black text-4xl text-slate-900 mb-2 uppercase tracking-tighter">Shahrear Sabbir</h2>
+                <h2 className="font-heading font-black text-4xl text-slate-900 mb-2 uppercase tracking-tighter">Shahrear Nadim</h2>
                 <p className="text-accentPurple font-black text-[10px] uppercase tracking-[0.4em] mb-6">Co-Founder & Technical Lead</p>
 
                 <p className="text-slate-500 text-lg font-medium leading-relaxed mb-10 max-w-sm mx-auto">
-                  Sabbir leads technical execution, bridging the gap between high-end web development and 
+                  Sabbir leads technical execution, bridging the gap between high-end web development and
                   user-focused, flawless functionality.
                 </p>
 
