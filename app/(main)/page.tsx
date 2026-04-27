@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Elegant Light Hero Section */}
       <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-white">
         {/* Background Image with Light Overlay */}
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-24 items-start">
-            <div className="sticky top-40">
+            <div className="lg:sticky lg:top-40 mb-16 lg:mb-0">
               <h2 className="font-heading font-black text-5xl md:text-6xl uppercase tracking-tighter mb-8 text-slate-900 leading-none">
                 PRECISE <br />
                 <span className="text-accentBlue">SOLUTIONS</span>
@@ -129,8 +129,8 @@ export default function Home() {
 
       {/* Image Showcase Section */}
       <section className="py-24 bg-slate-50 border-y border-slate-100 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 relative">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accentBlue/5 rounded-full blur-[120px] -mr-40 -mt-40"></div>
+        <div className="max-w-7xl mx-auto px-8 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-accentBlue/5 rounded-full blur-[80px] md:blur-[120px] -mr-20 md:-mr-40 -mt-20 md:-mt-40"></div>
           
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative z-10">

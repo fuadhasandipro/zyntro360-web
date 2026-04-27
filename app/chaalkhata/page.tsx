@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ChaalKhataLanding() {
   return (
-    <div className={`${hindSiliguri.className} bg-white text-slate-900 selection:bg-green-100`}>
+    <div className={`${hindSiliguri.className} bg-white text-slate-900 selection:bg-green-100 overflow-x-hidden`}>
       {/* Premium Header */}
       <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -81,7 +81,7 @@ export default function ChaalKhataLanding() {
             <img
               src="/hero.png"
               alt="ChaalKhata Dashboard"
-              className="w-full lg:w-[125%] max-w-none h-auto animate-float"
+              className="w-full lg:w-[125%] max-w-full lg:max-w-none h-auto animate-float"
             />
           </div>
         </div>

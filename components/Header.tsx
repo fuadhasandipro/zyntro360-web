@@ -70,11 +70,11 @@ export default function Header() {
 
             <button
               onClick={toggleMenu}
-              className={`md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none ${isMenuOpen ? 'menu-open' : ''}`}
+              className="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
             >
               <span className={`hamburger-line line-1 w-6 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
               <span className={`hamburger-line line-2 w-6 h-0.5 bg-textMain rounded-full block transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`hamburger-line line-3 w-6 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ${isMenuOpen ? '-translate-y-2 -rotate-45' : 'text-right ml-auto'}`}></span>
+              <span className={`hamburger-line line-3 w-6 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`}></span>
             </button>
           </div>
         </div>
