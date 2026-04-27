@@ -17,7 +17,7 @@ export default function ChaalKhataLanding() {
     <div className={`${hindSiliguri.className} bg-white text-slate-900 selection:bg-green-100 overflow-x-hidden`}>
       {/* Premium Header */}
       <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2 group">
             <span className="font-heading font-black text-2xl tracking-tighter text-[#064e3b]">
               CHAAL<span className="text-green-600">KHATA</span>
@@ -275,13 +275,13 @@ export default function ChaalKhataLanding() {
               </div>
             </div>
 
-            <div className="bg-white rounded-[3rem] p-12 text-slate-900 shadow-2xl transform rotate-1">
+            <div className="bg-white rounded-[3rem] p-12 text-slate-900 shadow-2xl transform ">
               <h4 className="text-3xl font-bold mb-8">বিস্তারিত তথ্য প্রদান করুন</h4>
               <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
                 <input type="hidden" name="access_key" value="6df542c5-7e23-4097-b146-245a1869e60d" />
                 <input type="hidden" name="subject" value="New ChaalKhata Inquiry" />
                 <input type="hidden" name="from_name" value="ChaalKhata Landing Page" />
-                
+
                 <div className="space-y-2">
                   <label className="text-xs uppercase font-black text-slate-400 tracking-widest">মিলের নাম</label>
                   <input type="text" name="mill_name" required placeholder="যেমন: মেসার্স রহিম রাইস মিল" className="w-full bg-slate-50 border-none rounded-2xl p-5 focus:ring-2 focus:ring-green-500 transition-all font-medium" />

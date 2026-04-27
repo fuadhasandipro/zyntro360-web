@@ -5,6 +5,14 @@
 @layer base {
   body {
     @apply bg-slate-50 text-slate-900 overflow-x-hidden;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  html {
+    overflow-x: hidden;
+    width: 100%;
   }
 }
 

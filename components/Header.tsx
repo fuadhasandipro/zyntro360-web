@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed w-full top-0 z-50 bg-white/40 backdrop-blur-md border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-4 group relative z-50" onClick={closeMenu}>
             <div className="relative w-12 h-12 flex items-center justify-center bg-white/80 rounded-full border border-slate-100 shadow-sm group-hover:border-accentBlue transition-all duration-500">
               <div className="w-3 h-3 bg-accentBlue rounded-full group-hover:scale-125 transition-transform duration-500"></div>
@@ -74,7 +74,7 @@ export default function Header() {
             >
               <span className={`hamburger-line line-1 w-6 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
               <span className={`hamburger-line line-2 w-6 h-0.5 bg-textMain rounded-full block transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`hamburger-line line-3 w-6 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`}></span>
+              <span className={`hamburger-line line-3 w-4 h-0.5 bg-textMain rounded-full block transition-transform duration-300 ml-auto ${isMenuOpen ? '-translate-y-2 -rotate-45 w-6' : ''}`}></span>
             </button>
           </div>
         </div>
