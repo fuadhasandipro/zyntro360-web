@@ -23,16 +23,16 @@ export default function BackgroundEffects() {
 
   return (
     <>
-      {/* Background Glow Orbs */}
-      <div className="glow-orb bg-blue-300 w-[500px] h-[500px] top-[-100px] left-[-200px] animate-pulse-soft"></div>
-      <div className="glow-orb bg-purple-300 w-[400px] h-[400px] top-[40%] right-[-150px] animate-pulse-soft" style={{ animationDelay: '1s' }}></div>
-      <div className="glow-orb bg-teal-200 w-[300px] h-[300px] bottom-[-50px] left-[20%] animate-pulse-soft" style={{ animationDelay: '2s' }}></div>
+      {/* Background Glow Orbs - Hidden on mobile for performance */}
+      <div className="hidden md:block glow-orb bg-blue-300 w-[500px] h-[500px] top-[-100px] left-[-200px] animate-pulse-soft"></div>
+      <div className="hidden md:block glow-orb bg-purple-300 w-[400px] h-[400px] top-[40%] right-[-150px] animate-pulse-soft" style={{ animationDelay: '1s' }}></div>
+      <div className="hidden md:block glow-orb bg-teal-200 w-[300px] h-[300px] bottom-[-50px] left-[20%] animate-pulse-soft" style={{ animationDelay: '2s' }}></div>
 
-      {/* Sparks */}
-      <div className="spark spark-blue w-2 h-2 top-[20%] left-[45%] animate-float opacity-60"></div>
-      <div className="spark spark-purple w-3 h-3 top-[30%] right-[35%] animate-float-delayed opacity-50"></div>
-      <div className="spark spark-teal w-1.5 h-1.5 top-[60%] left-[25%] animate-float-fast opacity-60"></div>
-      <div className="spark spark-blue w-2.5 h-2.5 top-[80%] right-[40%] animate-float opacity-50"></div>
+      {/* Sparks - Hidden on mobile for performance */}
+      <div className="hidden md:block spark spark-blue w-2 h-2 top-[20%] left-[45%] animate-float opacity-60"></div>
+      <div className="hidden md:block spark spark-purple w-3 h-3 top-[30%] right-[35%] animate-float-delayed opacity-50"></div>
+      <div className="hidden md:block spark spark-teal w-1.5 h-1.5 top-[60%] left-[25%] animate-float-fast opacity-60"></div>
+      <div className="hidden md:block spark spark-blue w-2.5 h-2.5 top-[80%] right-[40%] animate-float opacity-50"></div>
     </>
   );
 }
