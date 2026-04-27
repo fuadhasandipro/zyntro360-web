@@ -219,7 +219,7 @@ export default function ChaalKhataLanding() {
             {[
               { duration: '১ মাস', price: '৯৯৯ ৳', tag: 'ফ্লেক্সিবল', setup: '৪,৯৯৯ ৳ সেটআপ ফি', note: '১ম মাস ফ্রি', primary: false },
               { duration: '১ বছর', price: '৯,৯৯৯ ৳', tag: 'সেরা ভ্যালু', setup: 'সেটআপ ফি নেই!', note: 'সেটআপ সাশ্রয় ৪,৯৯৯ ৳', primary: true },
-              { duration: '৬ মাস', price: '৪,৯৯৯ ৳', tag: 'জনপ্রিয়', setup: '৪,৯৯৯ ৳ সেটআপ ফি', note: '৫০০ ৳ সাশ্রয়', primary: false },
+              { duration: '৬ মাস', price: '৪,৯৯৯ ৳', tag: 'জনপ্রিয়', setup: '৪,৯৯৯ ৳ সেটআপ ফি', note: '১০০০ ৳ সাশ্রয়', primary: false },
             ].map((p, i) => (
               <div key={i} className={`p-10 rounded-[3rem] border ${p.primary ? 'bg-white text-slate-900 border-white scale-110 shadow-2xl z-20' : 'bg-green-900/40 border-green-800 text-white hover:bg-green-800/60 z-10'} transition-all text-center relative overflow-hidden group`}>
                 {p.primary && <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-green-600 text-white text-[10px] font-black uppercase px-4 py-1 rounded-b-xl tracking-widest">Recommended</div>}
