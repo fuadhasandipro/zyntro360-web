@@ -269,7 +269,7 @@ export default function ChaalKhataLanding() {
                   <div className="w-14 h-14 rounded-2xl bg-slate-800 flex items-center justify-center text-2xl shadow-inner">✉️</div>
                   <div>
                     <div className="text-xs uppercase font-black text-slate-500 tracking-widest mb-1">ইমেইল করুন</div>
-                    <div className="text-2xl font-bold">fuad@chaalkhata.com</div>
+                    <div className="text-2xl font-bold">fuad@zyntro360.com</div>
                   </div>
                 </div>
               </div>
