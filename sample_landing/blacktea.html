@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Black Tea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Hind Siliguri"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gradientTop: '#0d3611',
+                            gradientBottom: '#18631c',
+                            yellow: '#fcf000',
+                            green: '#22c55e',
+                            darkgreen: '#0b4a11',
+                            formbg: '#eefdf0',
+                            btnsubmit: '#008c15'
+                        }
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        }
+                    },
+                    animation: {
+                        'pop': 'pop 1.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide number input spinners */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Wavy Bottom Divider */
+        .custom-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 45px;
+        }
+
+        .custom-wave .shape-fill {
+            fill: #ffffff;
+        }
+
+        /* Wavy Underlines */
+        .wavy-underline-green {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 0 10 5 T 20 5" fill="none" stroke="%2322c55e" stroke-width="2.5"/></svg>') repeat-x;
+            height: 10px;
+            display: block;
+            margin: 8px auto 0;
+            max-width: 100%;
+        }
+
+        .wavy-underline-yellow {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 10"><path d="M0 5 Q 5 0 10 5 T 20 5" fill="none" stroke="%23fcf000" stroke-width="2.5"/></svg>') repeat-x;
+            height: 10px;
+            display: block;
+            margin: 8px auto 0;
+            max-width: 100%;
+        }
+
+        /* Ribbon for hot offer */
+        .ribbon-wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 85px;
+            height: 85px;
+            overflow: hidden;
+            border-radius: 0 4px 0 0;
+        }
+
+        .ribbon {
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            transform: rotate(45deg);
+            position: relative;
+            padding: 4px 0;
+            left: -10px;
+            top: 15px;
+            width: 120px;
+            background-color: #ef4444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white">
+
+    <section
+        class="relative bg-gradient-to-b from-brand-gradientTop to-brand-gradientBottom pt-12 pb-24 px-4 border-b-4 border-white">
+        <div class="max-w-6xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
+
+            <div class="text-left text-white">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">
+                    চায়ের প্রকৃত স্বাদ পেতে এবং<br>
+                    রোগ প্রতিরোধ ক্ষমতা বাড়াতে<br>
+                    নিয়মিত পান করুন <span class="text-brand-yellow">স্পেশাল<br>ব্ল্যাক টি।</span>
+                </h1>
+
+                <p class="text-lg md:text-xl font-semibold mb-6 leading-relaxed opacity-90">
+                    সিলেটের বাগানের বাছাইকৃত শতভাগ ভেজালমুক্ত<br class="hidden md:block">
+                    অর্গানিক চা। যাতে নেই কোনো আর্টিফিশিয়াল রঙ<br class="hidden md:block">
+                    ও ক্যামিক্যাল।
+                </p>
+
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="bg-red-600 text-white text-[12px] px-2 py-0.5 rounded font-bold">☎</span>
+                    <p class="font-bold text-lg">প্রয়োজনে কল করুনঃ</p>
+                </div>
+                <p class="text-3xl font-bold text-brand-yellow mb-8 tracking-wide">01706676292</p>
+
+                <a href="#order"
+                    class="bg-brand-yellow text-black text-[22px] font-bold py-3 px-10 rounded inline-flex items-center gap-2 transition shadow-[0_4px_10px_rgba(252,240,0,0.3)] animate-pop">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
+                        </path>
+                    </svg>
+                    অর্ডার করুন
+                </a>
+            </div>
+
+            <div class="flex justify-center md:justify-end">
+                <div
+                    class="border-4 border-brand-yellow rounded-lg overflow-hidden w-full max-w-[450px] bg-white p-2 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1576092762791-dd9e2220cad1?q=80&w=800&auto=format&fit=crop"
+                        alt="Pile of Black Tea" class="w-full h-auto object-cover rounded">
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C69.71,108.31,137.65,110.3,207.12,98.6,245.41,92.14,283.56,76.53,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-2xl md:text-4xl font-bold text-brand-darkgreen">ভালো মানের ব্ল্যাক-টির উপকারিতাঃ
+                    </h2>
+                    <div class="wavy-underline-green"></div>
+                </div>
+            </div>
+
+            <ul class="space-y-4 max-w-4xl mx-auto mb-10">
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    শারীরিক ও মানসিক অবসাদ দূর হয়।
+                </li>
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    বিরিতিহীন কাজে এক কাপ চা এনার্জি যোগায়।
+                </li>
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    মাইগ্রেন-এর কষ্ট কমায়
+                </li>
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    সর্দি-কাশি, গলা ব্যথা, মাথা ব্যথায় চা প্রথম
+                </li>
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    ক্যানসার প্রতিরোধ করে।
+                </li>
+                <li class="flex items-start gap-3 text-lg md:text-xl font-medium text-gray-800">
+                    <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                    </svg>
+                    নার্ভ-কে শান্ত করে।
+                </li>
+            </ul>
+
+            <div
+                class="text-center bg-brand-formbg border border-green-200 p-6 rounded-lg max-w-3xl mx-auto mb-10 shadow-sm">
+                <p class="text-lg md:text-xl font-bold leading-relaxed text-brand-darkgreen">
+                    আপনি যদি চা পানের আসল স্বাদ উপভোগ করতে চান, তাহলে<br class="hidden md:block">
+                    আমদের চা পাতাগুলো একবার ব্যবহার করে দেখুন। আমরা<br class="hidden md:block">
+                    নিশ্চিত, আপনি আসল চা পাতার প্রেমে পড়ে যাবেন।
+                </p>
+            </div>
+
+            <div class="text-center">
+                <a href="#order"
+                    class="bg-brand-yellow text-black text-[22px] font-bold py-2.5 px-10 rounded shadow-md inline-flex items-center gap-2 transition animate-pop border-2 border-yellow-500">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
+                        </path>
+                    </svg>
+                    অর্ডার করুন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-gradient-to-b from-brand-gradientTop to-brand-gradientBottom text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-block">
+                    <h2 class="text-2xl md:text-4xl font-bold">আমাদের উপর কেন ভরসা রাখবেন?</h2>
+                    <div class="wavy-underline-yellow"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        আমাদের চা পাতায় নেই কোনো আটিফিশিয়াল রঙ
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        চা পাতায় পাবেন প্রাকৃতিক কষ, ঘ্রাণ ও গাঢ় লিকার।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        চা পাতা পরিমাণে অনেক কম লাগে।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        এটি দেশের সব থেকে ভালো কোয়ালিটিফুল ও উৎকৃষ্ট মানের চা।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        আমরা শতভাগ কোয়ালিটিতে সেরা।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        আমরা আমাদের গ্রাহকদের কথা মাথায় রেখেই আস্তার সাথে কাজ করে যাচ্ছি।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        আমরা সারাদেশে হোম ডেলিভারি দিয়ে থাকি।
+                    </li>
+                    <li class="flex items-start gap-3 text-lg md:text-xl font-medium">
+                        <svg class="w-6 h-6 text-brand-yellow flex-shrink-0 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        আমাদের কথা ও কাজে মিল না পেলে রিটার্ন সুবিধা।
+                    </li>
+                </ul>
+
+                <div class="flex justify-center">
+                    <div class="bg-white p-2 rounded-xl shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8c01a?q=80&w=800&auto=format&fit=crop"
+                            alt="Pouring tea leaves" class="w-full max-w-[400px] h-auto rounded">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#order"
+                    class="bg-brand-yellow text-black text-[22px] font-bold py-3 px-10 rounded shadow-[0_4px_10px_rgba(252,240,0,0.3)] inline-flex items-center gap-2 transition animate-pop">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z">
+                        </path>
+                    </svg>
+                    অর্ডার করুন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-brand-darkgreen mb-10">অফার প্রাইস</h2>
+
+            <div class="space-y-6 text-2xl md:text-4xl font-bold mb-8 flex flex-col items-center text-gray-800">
+                <div class="flex items-center gap-3">
+                    <span>৫০০ গ্রাম মাত্র-</span>
+                    <span class="text-red-500 line-through decoration-4 text-2xl md:text-3xl">৯০০৳</span>
+                    <span
+                        class="bg-brand-darkgreen text-white rounded-full px-6 py-1.5 inline-block shadow-md">৬৮০৳</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span>১ কেজি মাত্র-</span>
+                    <span class="text-red-500 line-through decoration-4 text-2xl md:text-3xl">১৭৫০৳</span>
+                    <span
+                        class="bg-brand-darkgreen text-white rounded-full px-6 py-1.5 inline-block shadow-md">১২৯০৳</span>
+                </div>
+            </div>
+
+            <p
+                class="text-xl md:text-2xl font-bold mb-14 text-brand-darkgreen flex items-center gap-2 border-2 border-brand-green px-8 py-2 rounded-full bg-brand-formbg">
+                <span class="text-2xl">🔥</span> ডেলিভারি চার্জ ফ্রি
+            </p>
+
+            <div class="w-full">
+                <div class="bg-brand-darkgreen text-white text-center py-3 rounded-md mb-8 shadow-sm">
+                    <h2 class="text-xl md:text-2xl font-bold flex items-center justify-center gap-2">
+                        <span class="text-brand-yellow text-2xl">🙂</span> সম্মানিত গ্রাহকদের রিভিউ
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div
+                        class="border border-gray-300 rounded overflow-hidden shadow-sm flex flex-col items-start p-4 bg-gray-50 text-left">
+                        <div class="flex items-center gap-3 mb-3">
+                            <img src="https://ui-avatars.com/api/?name=SA&background=random"
+                                class="w-10 h-10 rounded-full" alt="Customer">
+                            <h4 class="font-bold text-sm text-gray-800">Samiul Alam</h4>
+                        </div>
+                        <div class="text-sm text-gray-700 font-medium">চা-টা অনেক ভালো। আপনাদের ব্ল্যাক টির কোয়ালিটি
+                            বাজারের সাধারণ চা থেকে সম্পূর্ণ আলাদা।</div>
+                    </div>
+                    <div
+                        class="border border-gray-300 rounded overflow-hidden shadow-sm flex flex-col items-start p-4 bg-gray-50 text-left">
+                        <div class="flex items-center gap-3 mb-3">
+                            <img src="https://ui-avatars.com/api/?name=RA&background=random"
+                                class="w-10 h-10 rounded-full" alt="Customer">
+                            <h4 class="font-bold text-sm text-gray-800">Rafiqul Islam</h4>
+                        </div>
+                        <div class="text-sm text-gray-700 font-medium">এই চা খেয়ে অনেক তৃপ্তি পেলাম। ইনশাআল্লাহ সামনে
+                            আরও নিবো। ধন্যবাদ দ্রুত ডেলিভারি দেওয়ার জন্য।</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-12 px-4 bg-white">
+        <div
+            class="max-w-5xl mx-auto shadow-[0_0_20px_rgba(0,0,0,0.08)] rounded-t-md overflow-hidden border border-gray-200">
+            <div class="bg-brand-darkgreen text-white text-center py-4">
+                <h3 class="text-xl md:text-2xl font-bold">অর্ডার করার জন্য নিচের ফর্মটি পূরণ করুন-</h3>
+            </div>
+
+            <div class="bg-brand-formbg p-6 md:p-10">
+                <h4 class="text-lg font-bold mb-4 text-brand-darkgreen">Your Products</h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <label class="cursor-pointer">
+                        <div
+                            class="bg-white border border-gray-300 p-4 rounded flex items-center gap-4 relative shadow-sm hover:border-brand-green transition overflow-hidden">
+                            <div class="ribbon-wrapper">
+                                <div class="ribbon bg-red-500">হট অফার</div>
+                            </div>
+
+                            <input type="radio" name="product" checked
+                                class="w-4 h-4 text-brand-green focus:ring-brand-green ml-1 relative z-10">
+                            <img src="https://images.unsplash.com/photo-1576092762791-dd9e2220cad1?q=80&w=100&auto=format&fit=crop"
+                                class="w-12 h-12 object-cover rounded border border-gray-200 relative z-10" alt="Tea">
+                            <div class="flex-1 relative z-10">
+                                <h4 class="font-bold text-sm text-gray-800">স্পেশাল ব্ল্যাক-টি ১ কেজি × 1</h4>
+                                <div class="flex items-center gap-3 mt-1.5">
+                                    <div class="flex border border-gray-300 rounded overflow-hidden h-7 w-20">
+                                        <button type="button"
+                                            class="w-7 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold text-gray-600">-</button>
+                                        <input type="number" value="1" readonly
+                                            class="w-6 text-center text-sm border-x border-gray-300 focus:outline-none bg-white">
+                                        <button type="button"
+                                            class="w-7 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold text-gray-600">+</button>
+                                    </div>
+                                    <span class="font-bold text-sm text-brand-darkgreen">1,290.00৳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer">
+                        <div
+                            class="bg-white border border-gray-300 p-4 rounded flex items-center gap-4 relative shadow-sm hover:border-brand-green transition">
+                            <input type="radio" name="product"
+                                class="w-4 h-4 text-brand-green focus:ring-brand-green ml-1">
+                            <img src="https://images.unsplash.com/photo-1576092762791-dd9e2220cad1?q=80&w=100&auto=format&fit=crop"
+                                class="w-12 h-12 object-cover rounded border border-gray-200" alt="Tea">
+                            <div class="flex-1">
+                                <h4 class="font-bold text-sm text-gray-800">স্পেশাল ব্ল্যাক-টি ৫০০ গ্রাম × 1</h4>
+                                <div class="flex items-center gap-3 mt-1.5">
+                                    <div class="flex border border-gray-300 rounded overflow-hidden h-7 w-20">
+                                        <button type="button"
+                                            class="w-7 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold text-gray-600">-</button>
+                                        <input type="number" value="1" readonly
+                                            class="w-6 text-center text-sm border-x border-gray-300 focus:outline-none bg-white">
+                                        <button type="button"
+                                            class="w-7 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold text-gray-600">+</button>
+                                    </div>
+                                    <span class="font-bold text-sm text-brand-darkgreen">680.00৳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-base font-bold text-gray-800 mb-4 border-b border-gray-300 pb-2">ডেলিভারির তথ্য
+                            দিন</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">আপনার নাম লিখুন <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" value="Nahin"
+                                    class="w-full border-2 border-gray-400 rounded p-2 focus:outline-none focus:border-brand-green bg-white"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">আপনার সম্পূর্ণ ঠিকানা লিখুন
+                                    <span class="text-red-500">*</span></label>
+                                <input type="text" value="Burichong, Cumilla"
+                                    class="w-full border-2 border-gray-400 rounded p-2 focus:outline-none focus:border-brand-green bg-white"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">আপনার মোবাইল নাম্বার লিখুন
+                                    <span class="text-red-500">*</span></label>
+                                <input type="tel" value="01704199461"
+                                    class="w-full border-2 border-gray-400 rounded p-2 focus:outline-none focus:border-brand-green bg-white"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-bold text-gray-800 mb-4 border-b border-gray-300 pb-2">Your order</h3>
+
+                        <div class="mb-6">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-gray-300">
+                                        <th class="py-2 text-sm font-semibold text-gray-700">Product</th>
+                                        <th class="py-2 text-sm font-semibold text-gray-700 text-right">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-4 flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 border border-gray-200 rounded flex-shrink-0 overflow-hidden">
+                                                <img src="https://images.unsplash.com/photo-1576092762791-dd9e2220cad1?q=80&w=100&auto=format&fit=crop"
+                                                    alt="Thumbnail" class="w-full h-full object-cover">
+                                            </div>
+                                            <span class="text-sm font-semibold text-gray-800">স্পেশাল ব্ল্যাক-টি ১ কেজি
+                                                <span class="text-gray-500 ml-1 text-xs">× 1</span></span>
+                                        </td>
+                                        <td class="py-4 text-right text-sm font-bold text-gray-800">1,290.00৳</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-3 text-sm font-semibold text-gray-600">Subtotal</td>
+                                        <td class="py-3 text-right text-sm font-bold text-gray-800">1,290.00৳</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-3 text-sm font-semibold text-gray-600">Shipping</td>
+                                        <td class="py-3 text-right text-sm font-semibold text-gray-700">ফ্রী ডেলিভারি!
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200">
+                                        <td class="py-4 text-sm font-bold text-gray-800">Total</td>
+                                        <td class="py-4 text-right text-sm font-bold text-brand-darkgreen">1,290.00৳
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="bg-gray-50 p-5 rounded border border-gray-200 mb-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="font-bold text-sm text-gray-800">Cash on delivery</span>
+                            </div>
+                            <div
+                                class="bg-white p-3 text-xs text-gray-600 rounded relative shadow-sm border border-gray-100">
+                                <div
+                                    class="absolute -top-1.5 left-4 w-3 h-3 bg-white border-t border-l border-gray-100 rotate-45">
+                                </div>
+                                Pay with cash upon delivery.
+                            </div>
+                            <p class="text-[9px] text-gray-500 mt-5 leading-relaxed">
+                                Your personal data will be used to process your order, support your experience
+                                throughout this website, and for other purposes described in our <a href="#"
+                                    class="text-gray-800 underline font-semibold">privacy policy</a>.
+                            </p>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-brand-btnsubmit hover:bg-green-800 text-white font-bold py-3.5 rounded flex items-center justify-center gap-2 transition text-base shadow-md">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            অর্ডার সাবমিট করুন 1,290.00৳
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-6 px-4 border-t border-gray-200 mt-6">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-gray-600 text-center md:text-left">
+            <p>© 2024 Ullascha. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-brand-darkgreen transition">Privacy policy</a>
+                <a href="#" class="hover:text-brand-darkgreen transition">Terms of service</a>
+                <a href="#" class="hover:text-brand-darkgreen transition">Contact us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

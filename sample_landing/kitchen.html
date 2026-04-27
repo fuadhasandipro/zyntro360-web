@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday's Kitchen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Hind Siliguri"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            yellow: '#fce300',
+                            black: '#000000',
+                            graybg: '#f8f8f8',
+                            pinkish: '#f8d7da',
+                            lightyellow: '#fffbc7'
+                        }
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        }
+                    },
+                    animation: {
+                        'pop': 'pop 1.5s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for specific elements to match exactly */
+        .img-label-pink {
+            background-color: #ffdce1;
+        }
+
+        .img-label-yellow {
+            background-color: #fdf5d3;
+        }
+
+        .dashed-box {
+            border: 2px dashed #fff;
+        }
+
+        .dashed-box-yellow {
+            border: 2px dashed #fce300;
+        }
+
+        /* Number Input reset */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white">
+
+    <section class="relative bg-black h-[400px] md:h-[500px] flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=2000&auto=format&fit=crop"
+                alt="Biryani Background" class="w-full h-full object-cover opacity-40">
+        </div>
+
+        <div class="relative z-10 text-center px-4 flex flex-col items-center">
+            <div class="mb-8 text-center flex flex-col items-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-wider flex items-center gap-2">
+                    <span class="text-brand-yellow text-4xl">🔥</span> FRIDAY'S KITCHEN
+                </h2>
+                <p class="text-brand-yellow text-sm tracking-[0.3em] mt-1 uppercase">Its Always Friday Here</p>
+            </div>
+
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-snug max-w-4xl mx-auto">
+                গ্রামীণ পরিবেশে মাটির চুলায় কয়লা দিয়ে রান্না করা <span class="text-brand-yellow">হান্ডি বিরিয়ানি ও
+                    হান্ডি বীফ</span>
+            </h1>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="text-center md:text-left order-2 md:order-1 px-4">
+                <p class="text-xl md:text-2xl font-semibold leading-relaxed mb-8">
+                    কর্পোরেট ইভেন্ট, পারিবারিক গেট-টুগেদার , বিয়ে , গায়ে হলুদ , জন্মদিন, বিবাহ বার্ষিকী যেকোন অনুষ্ঠানের
+                    জন্য অগ্রিম বুকিং করতে পারবেন ফ্রাইডে কিচেন এর মাধ্যমে। অগ্রিম বুকিং করতে এখানে ক্লিক করুন
+                </p>
+                <div class="text-center md:text-left">
+                    <a href="#booking"
+                        class="bg-brand-yellow text-black text-xl font-bold py-3 px-8 rounded inline-block shadow-md hover:bg-yellow-400 transition animate-pop">
+                        বুকিং অর্ডার করতে ক্লিক করুন
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop"
+                    alt="People eating together" class="w-full h-auto rounded shadow-lg object-cover">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 px-4 bg-brand-graybg">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="w-full max-w-md mx-auto">
+                <div class="shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=800&auto=format&fit=crop"
+                        alt="Handi Biryani" class="w-full h-[250px] object-cover">
+                    <div class="img-label-pink py-3 text-center">
+                        <h3 class="text-xl font-bold text-black">হান্ডি বিরিয়ানি</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center md:text-left px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">ছোটবেলার নানী ও দাদির হাতের রান্নার স্বাদ আবার ফিরে
+                    পাবেন।</h2>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-8">
+                    এই স্বাদ ফিরে পাবার জন্য ফ্রাইডে কিচেন নিয়ে এসেছে মাটির হাড়িতে দমে রান্না করা হান্ডি বিরিয়ানি। এই
+                    হান্ডি বিরিয়ানি দমে রান্না করা হয় কয়লা দিয়ে। যেভাবে আমাদের দাদি নানীরা রান্না করত।<br><br>
+                    আমরা এই রান্নার ভিতরে বাটা মসলা ব্যবহার করে থাকি। রান্নায় মসলা সঠিক সময়ে ব্যবহারে বাড়ে স্বাদ ও
+                    সুঘ্রাণ। মসলার কারণেই রান্নার ঘ্রাণ চলে আসে ভিন্নতা। গোল, বাটা, গুঁড়া এ তিনভাবেই মসলা রান্নায়
+                    ব্যবহার হয়ে থাকে। বাটা মসলার স্বাদ পেতে পারেন আমাদের এই কয়লা দিয়ে দমে রান্না করা হান্ডি বিরিয়ানিতে।
+                    যা আমরা নিয়ে এসেছি ভিন্নতা।
+                </p>
+                <div class="text-center">
+                    <a href="#order"
+                        class="bg-brand-yellow text-black text-xl font-bold py-3 px-8 rounded inline-block shadow-md hover:bg-yellow-400 transition animate-pop">
+                        প্রি অর্ডার করতে ক্লিক করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 px-4 bg-black text-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="text-center md:text-left px-4 order-2 md:order-1">
+                <p class="text-sm md:text-base leading-relaxed mb-8">
+                    গ্রামের সকল সহজলভ্য উপাদান যেমন কাঠ, বাঁশ, খড়কুটো, পাটকাঠি, শুকনা পাতা—এসবই মাটির চুলার জ্বালানি
+                    হিসেবে ব্যবহার করা হয়। আর আমরা সকলে জানি যে মাটির চুলায় রান্না করা খাবারও হয় অনেক সুস্বাদু। কারণ এই
+                    মাটির চুলায় রান্না করা খাবারে থাকে এক অন্যরকম মনমুগ্ধকর ঘ্রাণ। আর এইরকম খাবার মানুষ সবথেকে খেতে
+                    পছন্দ করে।<br><br>
+                    শীল-পাটায় বাটা মসলা দিয়ে কয়লা ও মাটির চুলায় সম্পূর্ন খাড়ি ছাড়ে দমে রান্না করা হয় মজাদার হান্ডি বীফ ।
+                    গ্রামীণ খাবার ভাল মানুষের রান্না ও ভালবাসা দিয়ে রান্না করা হয় তাই রান্নার ভিতরে প্রকৃত স্বাদ পাওয়া
+                    যায়।
+                </p>
+                <div class="text-center md:text-left">
+                    <a href="#order"
+                        class="bg-brand-yellow text-black text-xl font-bold py-3 px-8 rounded inline-block shadow-md hover:bg-yellow-400 transition animate-pop">
+                        প্রি অর্ডার করতে ক্লিক করুন
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full max-w-md mx-auto order-1 md:order-2">
+                <div class="shadow-lg flex flex-col bg-white">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=800&auto=format&fit=crop"
+                        alt="Handi Beef" class="w-full h-[250px] object-cover">
+                    <div class="bg-white py-3 text-center border-t border-gray-200">
+                        <h3 class="text-xl font-bold text-black">হান্ডি বীফ</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="bg-brand-yellow py-4 text-center">
+            <h2 class="text-3xl font-bold text-black">ফ্রাইডে কিচেন কেন সেরা?</h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto py-12 px-4 text-center">
+            <p class="text-xl md:text-2xl font-semibold leading-relaxed mb-6">
+                শহরের কোলাহল মুক্ত নিরিবিলি গ্রামীণ পরিবেশে শীল-পাটায় বাটা মসলা দিয়ে মাটির চুলায় রান্না করা মজাদার সব
+                গ্রামীণ খাবার অনেকেই উপভোগ করতে চায়। তাই নিরিবিলি পরিবেশে এই সুস্বাদু খাবার উপভোগ করার জন্য এখনই চলে
+                আসুন ফ্রাইডে কিচেন।
+            </p>
+            <p class="text-xl md:text-2xl font-semibold leading-relaxed mb-8">
+                কর্পোরেট ইভেন্ট, পারিবারিক গেট-টুগেদার কিংবা যেকোনো পিকনিক আয়োজন করতে পারেন ফ্রাইডে কিচেন এর নিরিবিলি
+                গ্রামীণ পরিবেশে... 🌿☘️
+            </p>
+            <p class="text-xl md:text-2xl font-bold mb-10">
+                খাবার হাতে পেয়ে টেস্ট করে মূল্য পরিশোধ করার সুবিধা।
+            </p>
+
+            <div class="bg-black text-white rounded-[20px] p-6 max-w-2xl mx-auto mb-6 shadow-xl">
+                <p class="text-xl font-bold mb-2 text-brand-yellow">যেকোনো তথ্য পেতে বা বুকিং করতে কল করুনঃ</p>
+                <p class="text-lg">ঠিকানাঃ ফকির বাজার, বুড়িচং, কুমিল্লা</p>
+            </div>
+
+            <a href="tel:+8801869684533"
+                class="bg-black text-white text-lg font-bold py-3 px-8 rounded-full inline-block shadow-md hover:bg-gray-800 transition">
+                Call Now:+8801869684533
+            </a>
+        </div>
+    </section>
+
+    <section class="py-12 px-4 bg-brand-graybg">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div class="text-center md:text-left px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 leading-snug">
+                    আপনি চাইলে গ্রুপ হিসাবে মেনু নিতে পারেন অথবা জনপ্রতি হিসাবে খাবার উপভোগ করতে পারবেন।
+                </h2>
+                <p class="text-lg font-semibold mb-4">(সর্বনিম্ন ৪ জনের প্যাকেজ কনফার্ম করতে পারবেন)</p>
+                <p class="text-sm text-gray-700 mb-8">আপনার বাসায় কিংবা অফিসের জন্য হোম ডেলিভারি সার্ভিস নিতে পারবেন</p>
+                <div class="text-center">
+                    <a href="#order"
+                        class="bg-brand-yellow text-black text-xl font-bold py-3 px-8 rounded inline-block shadow-md hover:bg-yellow-400 transition animate-pop">
+                        প্রি অর্ডার করতে ক্লিক করুন
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div
+                    class="w-64 h-64 bg-pink-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2830/2830305.png" alt="Delivery Rider"
+                        class="w-48 h-48 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="bg-brand-yellow py-5 text-center flex flex-col justify-center items-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-black mb-1">ফুড মেনু</h2>
+            <p class="text-black font-semibold">মানসম্মত খাবারের স্বাদ অনুভব করুন</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto py-10 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=800&auto=format&fit=crop"
+                        alt="Handi Biryani Menu" class="w-full h-[300px] object-cover">
+                    <div class="img-label-pink py-4 text-center">
+                        <h3 class="text-2xl font-bold text-black">হান্ডি বিরিয়ানি</h3>
+                    </div>
+                </div>
+                <div class="shadow-lg flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=800&auto=format&fit=crop"
+                        alt="Handi Beef Menu" class="w-full h-[300px] object-cover">
+                    <div class="img-label-yellow py-4 text-center">
+                        <h3 class="text-2xl font-bold text-black">হান্ডি বীফ</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#order"
+                    class="bg-brand-yellow text-black text-xl font-bold py-3 px-10 rounded inline-block shadow-md hover:bg-yellow-400 transition animate-pop">
+                    প্রি অর্ডার করতে ক্লিক করুন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white px-4 pb-10">
+        <div class="max-w-5xl mx-auto bg-black p-1">
+            <div class="dashed-box p-4 text-center">
+                <h2 class="text-brand-yellow text-xl md:text-2xl font-bold leading-relaxed">
+                    বিবাহ বার্ষিকী অথবা জন্মদিন উপলক্ষে অর্ডার করলে ফ্রাইডে কিচেন এর পক্ষ থেকে থাকছে আকর্ষণীয় উপহার
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="bg-black py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="dashed-box-yellow p-8 relative mt-4">
+                <div class="absolute -top-6 left-0 right-0 text-center">
+                    <span
+                        class="bg-black text-brand-yellow text-xl md:text-2xl font-bold px-4 border border-brand-yellow inline-block rounded-sm p-1">
+                        যেকোনো অনুষ্ঠানের জন্য অগ্রিম বুকিং করুন
+                    </span>
+                </div>
+
+                <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div>
+                        <label class="block text-white font-semibold mb-2">আপনার নাম <span
+                                class="text-red-500">*</span></label>
+                        <input type="text"
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-white font-semibold mb-2">মোবাইল নাম্বার <span
+                                class="text-red-500">*</span></label>
+                        <input type="tel"
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-white font-semibold mb-2">প্রোগ্রাম তারিখ <span
+                                class="text-red-500">*</span></label>
+                        <input type="date"
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-white font-semibold mb-2">গেস্টের সংখ্যা <span
+                                class="text-red-500">*</span></label>
+                        <input type="number"
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                            required>
+                    </div>
+                    <div>
+                        <label class="block text-white font-semibold mb-2">প্রোগ্রাম টাইপ <span
+                                class="text-red-500">*</span></label>
+                        <select
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow">
+                            <option>বিয়ে</option>
+                            <option>জন্মদিন</option>
+                            <option>কর্পোরেট</option>
+                            <option>অন্যান্য</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-white font-semibold mb-2">ই-মেইল <span
+                                class="text-red-500">*</span></label>
+                        <input type="email"
+                            class="w-full p-2.5 bg-white text-black rounded focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                            required>
+                    </div>
+                    <div class="col-span-1 md:col-span-2 text-center mt-4">
+                        <button type="submit"
+                            class="bg-brand-yellow hover:bg-yellow-400 text-black font-bold text-lg py-3 w-full rounded transition animate-pop">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="bg-white py-10 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-4">
+            <h3 class="text-xl md:text-2xl font-bold">খাবার হাতে পেয়ে টেস্ট করে মূল্য পরিশোধ করতে পারবেন</h3>
+            <p class="text-lg md:text-xl font-bold text-gray-800">
+                আমাদের ফেইসবুক গ্রুপে খাবারের ছবি সহ যতবার রিভিউ পোস্ট করা হবে ততবার ১ টি করে কুপন এবং জিতে নিন আকর্ষণীয়
+                পুরস্কার। গ্রুপে জয়েন করতে লিখাটির ওপর ক্লিক করুন।
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-white pb-16 px-4">
+        <div class="max-w-5xl mx-auto bg-[#faf4f4] border border-gray-200 rounded-lg p-6 md:p-10 shadow-sm">
+            <h2 class="text-2xl font-bold text-center mb-8">অর্ডার করতে নিচের ফর্মটি পূরণ করুন</h2>
+
+            <h3 class="text-xl font-bold mb-4">খাবার নির্বাচন করুন</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef 1/2kg">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ (১/২ কেজি) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">650.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef 1kg">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ (১ কেজি) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">1,300.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef Plate">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ (১ প্লেট-৩ পিস) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">200.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef Biryani 1/2kg">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ বিরিয়ানি (১/২ কেজি) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">800.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef Biryani 1kg">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ বিরিয়ানি (১ কেজি) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">1,550.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef Biryani 1x2">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ বিরিয়ানি (১x২) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">360.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Beef Biryani 1x1">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি বীফ বিরিয়ানি (১x১) × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">180.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Chicken Biryani Half">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি চিকেন বিরিয়ানি হাফ × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">60.00৳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 p-3 rounded flex items-center gap-3 relative">
+                    <input type="checkbox" class="w-5 h-5 text-black absolute left-3 top-3 focus:ring-black">
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=100&auto=format&fit=crop"
+                        class="w-16 h-16 object-cover rounded ml-8" alt="Chicken Biryani Full">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm">হান্ডি চিকেন বিরিয়ানি ফুল × 1</h4>
+                        <div class="flex items-center gap-2 mt-2">
+                            <div class="flex border border-gray-300 rounded overflow-hidden h-8 w-24">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">-</button>
+                                <input type="number" value="1"
+                                    class="w-8 text-center text-sm border-x border-gray-300 focus:outline-none">
+                                <button
+                                    class="w-8 flex items-center justify-center bg-gray-50 hover:bg-gray-100 font-bold">+</button>
+                            </div>
+                            <span class="font-bold text-sm">120.00৳</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-gray-300 pb-2">Billing details</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">আপনার নাম <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" value="Test"
+                                class="w-full border border-gray-300 p-2.5 rounded bg-white focus:outline-none focus:ring-1 focus:ring-black">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">মোবাইল নাম্বার <span
+                                    class="text-red-500">*</span></label>
+                            <input type="tel" value="0188398323"
+                                class="w-full border border-gray-300 p-2.5 rounded bg-white focus:outline-none focus:ring-1 focus:ring-black">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-1">সম্পূর্ণ ঠিকানা <span
+                                    class="text-red-500">*</span></label>
+                            <input type="text" value="jhhdfdsf"
+                                class="w-full border border-gray-300 p-2.5 rounded bg-white focus:outline-none focus:ring-1 focus:ring-black">
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-gray-300 pb-2">Your order</h3>
+
+                    <div class="mb-6">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-300">
+                                    <th class="py-2 text-sm text-gray-600 font-medium">Product</th>
+                                    <th class="py-2 text-sm text-gray-600 font-medium text-right">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-300">
+                                    <td class="py-3 flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 border border-gray-200 rounded overflow-hidden flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=100&auto=format&fit=crop"
+                                                alt="Thumbnail" class="w-full h-full object-cover">
+                                        </div>
+                                        <span class="text-sm">হান্ডি বীফ (১/২ কেজি) <span
+                                                class="text-gray-500 ml-1 text-xs">× 1</span></span>
+                                    </td>
+                                    <td class="py-3 text-right text-sm">650.00৳</td>
+                                </tr>
+                                <tr class="border-b border-gray-300">
+                                    <td class="py-3 text-sm font-semibold text-gray-600">Subtotal</td>
+                                    <td class="py-3 text-right text-sm">650.00৳</td>
+                                </tr>
+                                <tr class="border-b border-gray-300">
+                                    <td class="py-4 text-sm font-bold">Total</td>
+                                    <td class="py-4 text-right text-sm font-bold">650.00৳</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-gray-100 p-4 rounded mb-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <input type="radio" checked class="w-4 h-4 text-black focus:ring-black">
+                            <span class="font-bold text-sm">Cash on delivery</span>
+                        </div>
+                        <div class="bg-white p-3 text-sm text-gray-600 rounded relative mt-2 border border-gray-200">
+                            <div
+                                class="absolute -top-1.5 left-5 w-3 h-3 bg-white border-t border-l border-gray-200 rotate-45">
+                            </div>
+                            Pay with cash upon delivery.
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4">
+                            Your personal data will be used to process your order, support your experience throughout
+                            this website, and for other purposes described in our <a href="#" class="underline">privacy
+                                policy</a>.
+                        </p>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-black hover:bg-gray-800 text-white font-bold py-3.5 rounded transition text-center shadow-lg">
+                        অর্ডার করুন 650.00৳
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-6 px-4 relative">
+        <div
+            class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+            <p>© 2024 fridayskitchenbd. Design by Nahinweabcreations</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition">Refund policy</a>
+                <a href="#" class="hover:text-white transition">Privacy policy</a>
+                <a href="#" class="hover:text-white transition">Terms of service</a>
+            </div>
+        </div>
+
+        <a href="#"
+            class="absolute bottom-6 right-6 bg-[#dffcba] w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+            <svg class="w-6 h-6 text-green-700" fill="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm5.36 13.92c-.2.56-1.15 1.08-1.59 1.13-.39.04-.88.11-2.43-.53-1.85-.77-3.05-2.67-3.14-2.8-.09-.12-1.22-1.63-1.22-3.11 0-1.48.77-2.21 1.05-2.51.24-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.4-.07.62.46.23.55.77 1.88.84 2.02.07.14.11.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.35-.41.48-.14.15-.29.31-.12.61.17.3 1.04 1.73 1.63 2.27.76.69 1.48.91 1.78 1.05.3.14.48.12.66-.08.18-.21.78-.91 1-1.22.21-.31.42-.26.69-.16.27.1 1.73.82 2.02.97.3.14.5.22.57.34.07.13.07.72-.13 1.28z" />
+            </svg>
+        </a>
+    </footer>
+
+</body>
+
+</html>
