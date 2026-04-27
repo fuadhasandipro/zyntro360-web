@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="md:col-span-3 lg:col-span-2">
           <h4 className="text-slate-900 font-heading font-black text-xs uppercase tracking-[0.3em] mb-8">Navigation</h4>
           <ul className="space-y-4">
-            {['About', 'Services', 'Team', 'Chaal Khata', 'Careers', 'Contact'].map((link) => (
+            {['About', 'Services', 'Team', 'Chaal Khata', 'Contact'].map((link) => (
               <li key={link}>
                 <Link href={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '')}`} className="text-slate-500 hover:text-accentBlue text-sm font-bold transition-colors">
                   {link}
