@@ -41,7 +41,7 @@ export default function Footer() {
           <ul className="space-y-6">
             <li>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Email</div>
-              <div className="text-slate-900 font-bold text-sm">fuad@zyntro360.com.bd</div>
+              <div className="text-slate-900 font-bold text-sm">fuad@zyntro360.com</div>
             </li>
             <li>
               <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Phone</div>

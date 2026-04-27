@@ -40,7 +40,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-heading font-bold text-lg text-textMain mb-1">Email Us</h3>
                   <p className="text-textMuted text-sm leading-relaxed mb-2">We typically reply within a few hours during business days.</p>
-                  <a href="mailto:fuad@zyntro360.com.bd" className="text-accentBlue font-semibold hover:text-accentPurple transition-colors">fuad@zyntro360.com.bd</a>
+                  <a href="mailto:fuad@zyntro360.com" className="text-accentBlue font-semibold hover:text-accentPurple transition-colors">fuad@zyntro360.com</a>
                 </div>
               </div>
 
